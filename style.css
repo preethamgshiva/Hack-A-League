@@ -34,6 +34,7 @@ body {
 #navbar li{
     list-style: none;
     padding: 0 20px;
+    position: relative;
 }
 
 #navbar li a{
@@ -44,7 +45,7 @@ body {
     transition: 0.4s;
 }
 
-#navbar li a:hover{
+#navbar li a:hover, #navbar li a.active {
     color: #00bf62;
     font-size: 23px;
 }
@@ -58,7 +59,13 @@ body {
 }
 
 
-#navbar li a.active{
-    color: #00bf62;
-    text-decoration: underline;
+#navbar li a.active::after{
+    content: "";
+    width: 30%;
+    height: 3px;
+    background: #1A1A1A;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+    font-size: 23px;
 }
